@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"   
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<!--extends="myPackageIncludeInterceptor    json-default" -->
+	<package name="labmemberManager-json" extends="json-default"
+		namespace="/labmember">
+		<action name="labmemberAdd" class="LabMemberAction" method="create">
+			<result type="json">
+				<param name="noCache">true</param>
+				<param name="excludeNullProperties">true</param>
+				<param name="includeProperties">
+					success,
+					message					
+				</param>
+			</result>				
+		</action>
+		<action name="labmemberDelete" class="LabMemberAction" method="delete">
+			<result type="json">
+				<param name="noCache">true</param>
+				<param name="excludeNullProperties">true</param>
+				<param name="includeProperties">
+					success,
+					message
+				</param>
+			</result>
+		</action>
+
+		<action name="labmemberUpdate" class="LabMemberAction" method="update">
+			<result type="json">
+				<param name="noCache">true</param>
+				<param name="includeProperties">
+					success,
+					message
+				</param>
+			</result>
+		</action>
+		<action name="pagelabmemberList" class="LabMemberAction" method="pagelabmemberList">
+			<result type="json">
+				<param name="noCache">true</param>
+				<param name="excludeNullProperties">true</param>
+				<param name="includeProperties">
+					success,
+					message,
+					totalCount,
+					pagelabmemberList\[\d+\]\.id,
+					pagelabmemberList\[\d+\]\.grade,
+					pagelabmemberList\[\d+\]\.major,
+					pagelabmemberList\[\d+\]\.member,
+					pagelabmemberList\[\d+\]\.modifytime
+				</param>
+			</result>				
+		</action>
+		
+	</package>
+</struts>		        

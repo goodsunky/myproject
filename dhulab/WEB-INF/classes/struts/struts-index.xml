@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>	
+	<package name="default" extends="struts-default" namespace="/">
+		<action name="index" class="IndexAction">	
+		    <result name="success">WEB-INF/front/index.jsp</result>			         
+	    </action>
+	    <action name="adminlogin" class="IndexAction">	
+		    <result name="success">WEB-INF/admin/login.jsp</result>			         
+	    </action>
+	    <action name="desktop" class="LoginAction" method="showdesktop">
+			<result name="success">WEB-INF/admin/desktop.jsp</result>
+			<result name="input">WEB-INF/admin/login.jsp</result>
+		</action>
+		<action name="zyxz" class="ResourceDownloadAction" method="showresources">
+			<result name="success">WEB-INF/front/resourcedownload.jsp</result>	
+		</action>
+		<action name="sczy" class="ResourcesAction" method="validateuser">
+			<result name="success">WEB-INF/front/personalsystem.jsp</result>
+			<result name="input">WEB-INF/front/personallogin.jsp</result>
+		</action>
+		<action name="userlogin" class="ResourcesAction" method="userlogin">
+			<result name="success">WEB-INF/front/personallogin.jsp</result>	
+		</action>
+		<action name="clicklogin" class="LoginAction" method="commonlogin">
+			<result name="input">WEB-INF/front/personallogin.jsp</result>
+			<result name="success">WEB-INF/front/personalsystem.jsp</result>	
+		</action>
+		<action name="logout" class="SystemAction" method="logout">
+			<result name="success">WEB-INF/front/personallogin.jsp</result>	
+		</action>
+		<action name="introduction" class="LabIntroductionAction" method="showintroduction">
+			<result name="success">WEB-INF/front/labintroduction.jsp</result>	
+		</action>
+		<action name="labpicture" class="LabPictureAction" method="showpictures">
+			<result name="success">WEB-INF/front/labintroduction.jsp</result>	
+		</action>
+		<action name="hzqy" class="CooperateCompanyAction" method="showcooperatecompany">
+			<result name="success">WEB-INF/front/coorperatecompany.jsp</result>	
+		</action>
+		<action name="kyxm" class="ResearchProjectAction" method="showresearchproject">
+			<result name="success">WEB-INF/front/researchproject.jsp</result>	
+		</action>
+		<action name="kyxmclass" class="ResearchProjectAction" method="showresearchprojectclass">
+			<result name="success">WEB-INF/front/researchproject.jsp</result>	
+		</action>
+		<action name="xscg" class="AcademicFruitAction" method="pageacademicfruit">
+			<result name="success">WEB-INF/front/academicfruit.jsp</result>	
+		</action>
+		<action name="chengyuan" class="LabMemberAction" method="showlabmember">
+			<result name="success">WEB-INF/front/labmember.jsp</result>	
+		</action>
+		<action name="rchd" class="DutyAction" method="showroutine">
+			<result name="success">WEB-INF/front/routine.jsp</result>	
+		</action>
+		<action name="gywm" class="ContactusAction" method="showcontactus">
+			<result name="success">WEB-INF/front/contactus.jsp</result>	
+		</action>
+		<action name="moreggtz" class="NoticeInfoAction" method="pagenoticeinfo">
+			<result name="success">WEB-INF/front/moreinfo.jsp</result>	
+		</action>
+		<action name="morexshd" class="NoticeInfoAction" method="pageseminarinfo">
+			<result name="success">WEB-INF/front/moreinfo.jsp</result>	
+		</action>
+		<action name="morekyxm" class="ResearchProjectAction" method="pageresearchproject">
+			<result name="success">WEB-INF/front/moreinfo.jsp</result>	
+		</action>
+		<action name="morexscg" class="AcademicFruitAction" method="pageacademicfruit">
+			<result name="success">WEB-INF/front/moreinfo.jsp</result>	
+		</action>
+		<action name="moreyqlj" class="FriendlyLinkAction" method="pagefriendlylink">
+			<result name="success">WEB-INF/front/morelink.jsp</result>	
+		</action>
+		<action name="mmxg" class="SystemAction" method="showflat">
+			<result name="input">WEB-INF/front/personallogin.jsp</result>
+			<result name="success">WEB-INF/front/alterpasswordflat.jsp</result>	
+		</action>
+		<action name="alterpwd" class="SystemAction" method="alterpassword">
+			<result name="success">WEB-INF/front/alterpasswordflat.jsp</result>	
+		</action>
+		<action name="myzy" class="ResourceDownloadAction" method="showmyresources">
+			<result name="input">WEB-INF/front/personallogin.jsp</result>
+			<result name="success">WEB-INF/front/myresources.jsp</result>	
+		</action>
+		<action name="grxx" class="UserAction" method="showmyinfo">
+			<result name="input">WEB-INF/front/personallogin.jsp</result>
+			<result name="success">WEB-INF/front/personalinfo.jsp</result>	
+		</action>
+		<action name="save" class="UserAction" method="updatemyinfo">
+			<result name="success">WEB-INF/front/personalinfo.jsp</result>	
+		</action>
+		<action name="zysc" class="ResourcesAction">
+			<result name="input">WEB-INF/front/personallogin.jsp</result>
+			<result name="success">WEB-INF/front/uploadresourcesflat.jsp</result>	
+		</action>
+		<action name="upload" class="ResourcesAction" method="uploadmyresource">
+			<result name="success">WEB-INF/front/uploadmessageflat.jsp</result>	
+		</action>
+		<action name="deleters" class="ResourcesAction" method="deletemyresources">
+			<result name="success">WEB-INF/front/myresources.jsp</result>
+		</action>
+	</package>
+	<package name="login-json" extends="json-default" namespace="/">	
+		<action name="login" class="LoginAction" method="login">
+			<result type="json">
+				<param name="noCache">true</param>
+ 				<param name="excludeNullProperties">true</param>
+ 				<param name="includeProperties">
+ 					success,
+ 					message
+ 				</param>
+			</result>			
+		</action>
+	</package>
+</struts>    

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+
+	<bean id="dataSource"
+		class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName"
+			value="com.mysql.jdbc.Driver">
+		</property>
+		<property name="url" value="jdbc:mysql://localhost/dhulab?autoReconnect=true&amp;autoReconnectForPools=true"></property>
+		<property name="username" value="root"></property>
+		<property name="password" value="jcijifen"></property>
+		<property name="validationQuery" value="SELECT 1"/>     
+		<property name="testOnBorrow" value="true"/>
+	</bean>
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.MySQLDialect
+				</prop>
+			</props>
+		</property>
+		<property name="mappingResources">
+			<list>
+				<value>com/domain/NoticeInfo.hbm.xml</value>
+				<value>com/domain/NoticeAttachment.hbm.xml</value>
+				<value>com/domain/ExpandedName.hbm.xml</value>
+				<value>com/domain/AcademicAttachment.hbm.xml</value>
+				<value>com/domain/ResearchAttachment.hbm.xml</value>
+				<value>com/domain/ResearchProject.hbm.xml</value>
+				<value>com/domain/AcademicFruit.hbm.xml</value>
+				<value>com/domain/AcademicScore.hbm.xml</value>
+				<value>com/domain/CooperateCompany.hbm.xml</value>
+				<value>com/domain/CooperatePicture.hbm.xml</value>
+				<value>com/domain/FriendlyLink.hbm.xml</value>
+				<value>com/domain/LabFacility.hbm.xml</value>
+				<value>com/domain/LabIntroduction.hbm.xml</value>
+				<value>com/domain/LabPicture.hbm.xml</value>
+				<value>com/domain/Student.hbm.xml</value>
+				<value>com/domain/TeacherEssay.hbm.xml</value>
+				<value>com/domain/TeacherProject.hbm.xml</value>
+				<value>com/domain/Teacher.hbm.xml</value>
+				<value>com/domain/Duty.hbm.xml</value>
+				<value>com/domain/Userinfo.hbm.xml</value>
+				<value>com/domain/Resources.hbm.xml</value>
+				<value>com/domain/LabInstitution.hbm.xml</value>
+				<value>com/domain/LabMember.hbm.xml</value>
+				<value>com/domain/Grade.hbm.xml</value>
+				<value>com/domain/Major.hbm.xml</value>
+				<value>com/domain/Contactus.hbm.xml</value>
+				<value>com/domain/ResearchType.hbm.xml</value>
+				<value>com/domain/ResourceType.hbm.xml</value>
+				<value>com/domain/ResourceSubtype.hbm.xml</value></list>
+		</property>	
+	</bean>		
+	<bean id="noticeInfoDAO" class="com.dao.impl.NoticeInfoDAOImpl">
+			<property name="sessionFactory">
+				<ref local="sessionFactory" />
+			</property>
+	</bean>
+	<bean id="academicFruitDAO" class="com.dao.impl.AcademicFruitDAOImpl">
+			<property name="sessionFactory">
+				<ref local="sessionFactory" />
+			</property>
+	</bean>
+	<bean id="researchProjectDAO" class="com.dao.impl.ResearchProjectDAOImpl">
+			<property name="sessionFactory">
+				<ref local="sessionFactory" />
+			</property>
+	</bean>
+	<bean id="dutyDAO" class="com.dao.impl.DutyDAOImpl">
+			<property name="sessionFactory">
+				<ref local="sessionFactory" />
+			</property>
+	</bean>
+	<bean id="friendlyLinkDAO" class="com.dao.impl.FriendlyLinkDAOImpl">
+			<property name="sessionFactory">
+				<ref local="sessionFactory" />
+			</property>
+	</bean>
+	<bean id="seminarInfoDAO" class="com.dao.impl.NoticeInfoDAOImpl">
+			<property name="sessionFactory">
+				<ref local="sessionFactory" />
+			</property>
+	</bean>
+	<bean id="labIntroductionDAO" class="com.dao.impl.LabIntroductionDAOImpl">
+			<property name="sessionFactory">
+				<ref local="sessionFactory" />
+			</property>
+	</bean>
+	<bean id="userDAO" class="com.dao.impl.UserDAOImpl">
+			<property name="sessionFactory">
+				<ref local="sessionFactory" />
+			</property>
+	</bean>
+	<bean id="noticeattachmentDAO" class="com.dao.impl.NoticeAttachmentDAOImpl">
+			<property name="sessionFactory">
+				<ref local="sessionFactory" />
+			</property>
+	</bean>
+	<bean id="expandednameDAO" class="com.dao.impl.ExpandedNameDAOImpl">
+			<property name="sessionFactory">
+				<ref local="sessionFactory" />
+			</property>
+	</bean>
+	<bean id="resourceDAO" class="com.dao.impl.ResourceDAOImpl">
+			<property name="sessionFactory">
+				<ref local="sessionFactory" />
+			</property>
+	</bean>
+	
+	<bean id="researchattachmentDAO" class="com.dao.impl.ResearchAttachmentDAOImpl">
+			<property name="sessionFactory">
+				<ref local="sessionFactory" />
+			</property>
+	</bean>
+	<bean id="academicattachmentDAO" class="com.dao.impl.AcademicAttachmentDAOImpl">
+			<property name="sessionFactory">
+				<ref local="sessionFactory" />
+			</property>
+	</bean>
+	<bean id="labPictureDAO" class="com.dao.impl.LabPictureDAOImpl">
+			<property name="sessionFactory">
+				<ref local="sessionFactory" />
+			</property>
+	</bean>
+	<bean id="cooperatecompanyDAO" class="com.dao.impl.CooperateCompanyDAOImpl">
+			<property name="sessionFactory">
+				<ref local="sessionFactory" />
+			</property>
+	</bean>
+	<bean id="labinstitutionDAO" class="com.dao.impl.LabInstitutionDAOImpl">
+			<property name="sessionFactory">
+				<ref local="sessionFactory" />
+			</property>
+	</bean>
+	<bean id="labmemberDAO" class="com.dao.impl.LabMemberDAOImpl">
+			<property name="sessionFactory">
+				<ref local="sessionFactory" />
+			</property>
+	</bean>
+	<bean id="majorDAO" class="com.dao.impl.MajorDAOImpl">
+			<property name="sessionFactory">
+				<ref local="sessionFactory" />
+			</property>
+	</bean>
+	<bean id="gradeDAO" class="com.dao.impl.GradeDAOImpl">
+			<property name="sessionFactory">
+				<ref local="sessionFactory" />
+			</property>
+	</bean>
+	<bean id="contactusDAO" class="com.dao.impl.ContactusDAOImpl">
+			<property name="sessionFactory">
+				<ref local="sessionFactory" />
+			</property>
+	</bean>
+	<bean id="researchtypeDAO" class="com.dao.impl.ResearchTypeDAOImpl">
+			<property name="sessionFactory">
+				<ref local="sessionFactory" />
+			</property>
+	</bean>
+	<bean id="resourcetypeDAO" class="com.dao.impl.ResourceTypeDAOImpl">
+			<property name="sessionFactory">
+				<ref local="sessionFactory" />
+			</property>
+	</bean>
+	<bean id="resourcesubtypeDAO" class="com.dao.impl.ResourceSubTypeDAOImpl">
+			<property name="sessionFactory">
+				<ref local="sessionFactory" />
+			</property>
+	</bean>
+	<bean id="mgr" class="com.service.impl.ActionManagerImpl">
+			<property name="noticeInfoDAO" ref="noticeInfoDAO"/>
+			<property name="academicFruitDAO" ref="academicFruitDAO"/>
+			<property name="researchProjectDAO" ref="researchProjectDAO"/>
+			<property name="dutyDAO" ref="dutyDAO"/>
+			<property name="friendlyLinkDAO" ref="friendlyLinkDAO"/>
+			<property name="seminarInfoDAO" ref="seminarInfoDAO"/>
+			<property name="labIntroductionDAO" ref="labIntroductionDAO"/>
+			<property name="userDAO" ref="userDAO"/>
+			<property name="noticeattachmentDAO" ref="noticeattachmentDAO"/>
+			<property name="expandednameDAO" ref="expandednameDAO"/>
+			<property name="resourceDAO" ref="resourceDAO"/>
+			<property name="researchattachmentDAO" ref="researchattachmentDAO"/>
+			<property name="academicattachmentDAO" ref="academicattachmentDAO"/>
+			<property name="labPictureDAO" ref="labPictureDAO"/>
+			<property name="cooperatecompanyDAO" ref="cooperatecompanyDAO"/>
+			<property name="labinstitutionDAO" ref="labinstitutionDAO"/>
+			<property name="labmemberDAO" ref="labmemberDAO"/>
+			<property name="majorDAO" ref="majorDAO"/>
+			<property name="gradeDAO" ref="gradeDAO"/>
+			<property name="contactusDAO" ref="contactusDAO"/>
+			<property name="researchtypeDAO" ref="researchtypeDAO"/>
+			<property name="resourcetypeDAO" ref="resourcetypeDAO"/>
+			<property name="resourcesubtypeDAO" ref="resourcesubtypeDAO"/>
+	</bean>
+	
+	<bean name="IndexAction" class="com.action.IndexAction" scope="prototype" autowire="byName"/>
+	<bean name="LoginAction" class="com.action.LoginAction" scope="prototype" autowire="byName"/>
+	<bean name="SystemAction" class="com.action.SystemAction" scope="prototype" autowire="byName"/>
+	<bean name="UserAction" class="com.action.UserAction" scope="prototype" autowire="byName"/>
+	<bean name="NoticeInfoAction" class="com.action.NoticeInfoAction" scope="prototype" autowire="byName"/>
+	<bean name="ResourceDownloadAction" class="com.action.ResourceDownloadAction" scope="prototype" autowire="byName"/>
+	<bean name="ResearchProjectAction" class="com.action.ResearchProjectAction" scope="prototype" autowire="byName"/>
+	<bean name="AcademicFruitAction" class="com.action.AcademicFruitAction" scope="prototype" autowire="byName"/>
+	<bean name="DutyAction" class="com.action.DutyAction" scope="prototype" autowire="byName"/>
+	<bean name="ResourcesAction" class="com.action.ResourcesAction" scope="prototype" autowire="byName"/>
+	<bean name="FriendlyLinkAction" class="com.action.FriendlyLinkAction" scope="prototype" autowire="byName"/>
+	<bean name="LabIntroductionAction" class="com.action.LabIntroductionAction" scope="prototype" autowire="byName"/>
+	<bean name="LabPictureAction" class="com.action.LabPictureAction" scope="prototype" autowire="byName"/>
+	<bean name="CooperateCompanyAction" class="com.action.CooperateCompanyAction" scope="prototype" autowire="byName"/>
+	<bean name="LabInstitutionAction" class="com.action.LabInstitutionAction" scope="prototype" autowire="byName"/>
+	<bean name="LabMemberAction" class="com.action.LabMemberAction" scope="prototype" autowire="byName"/>
+	<bean name="MajorAction" class="com.action.MajorAction" scope="prototype" autowire="byName"/>
+	<bean name="GradeAction" class="com.action.GradeAction" scope="prototype" autowire="byName"/>
+	<bean name="ContactusAction" class="com.action.ContactusAction" scope="prototype" autowire="byName"/>
+	<bean name="ResearchTypeAction" class="com.action.ResearchTypeAction" scope="prototype" autowire="byName"/>
+	<bean name="ResourceTypeAction" class="com.action.ResourceTypeAction" scope="prototype" autowire="byName"/>
+	<bean name="ResourceSubTypeAction" class="com.action.ResourceSubTypeAction" scope="prototype" autowire="byName"/>
+	
+</beans>

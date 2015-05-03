@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"   
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<!--extends="myPackageIncludeInterceptor    json-default" -->
+	<package name="academicfruitinfo-default" extends="struts-default" namespace="/">
+		<action name="academicfruitdetail" class="AcademicFruitAction" method="showacademicfruitdetail">
+			<result name="success">WEB-INF/front/showacademicfruitdetail.jsp</result>	
+		</action>
+	</package>
+	
+	<package name="academicfruitManager-json" extends="json-default"
+		namespace="/academicfruit">
+		<action name="academicfruitAdd" class="AcademicFruitAction" method="create">
+			<result type="json">
+				<param name="noCache">true</param>
+				<param name="excludeNullProperties">true</param>
+				<param name="includeProperties">
+					success,
+					message					
+				</param>
+			</result>				
+		</action>
+		<action name="academicfruitDelete" class="AcademicFruitAction" method="delete">
+			<result type="json">
+				<param name="noCache">true</param>
+				<param name="excludeNullProperties">true</param>
+				<param name="includeProperties">
+					success,
+					message
+				</param>
+			</result>
+		</action>
+
+		<action name="academicfruitUpdate" class="AcademicFruitAction" method="update">
+			<result type="json">
+				<param name="noCache">true</param>
+				<param name="includeProperties">
+					success,
+					message
+				</param>
+			</result>
+		</action>
+		<action name="academicfruitattachmentDownload" class="AcademicFruitAction" method="download">
+			<result type="json">
+				<param name="noCache">true</param>
+				<param name="excludeNullProperties">true</param>
+				<param name="includeProperties">
+					success,
+					message					
+				</param>
+			</result>				
+		</action>
+		<action name="pageacademicfruitList" class="AcademicFruitAction" method="pageAcademicFruitList">
+			<result type="json">
+				<param name="noCache">true</param>
+				<param name="excludeNullProperties">true</param>
+				<param name="includeProperties">
+					success,
+					message,
+					totalCount,
+					pageacademicfruitList\[\d+\]\.id,
+					pageacademicfruitList\[\d+\]\.title,
+					pageacademicfruitList\[\d+\]\.introduction,
+					pageacademicfruitList\[\d+\]\.time
+				</param>
+			</result>				
+		</action>
+		
+	</package>
+</struts>		        

@@ -1,0 +1,159 @@
+select{
+	font-size:11px;
+}
+.image-tip{
+	padding:4px;
+	height:98px;
+	white-space:nowrap;
+}
+.image-tip img {
+	margin-right:10px;
+	border:2px solid #083772;
+}
+.image-tip b{
+	color: #083772;
+	display: block;
+	margin-bottom: 4px;
+}
+.image-tip span{
+	display: block;
+	margin-bottom: 5px;
+	margin-left: 5px;
+}
+#images{
+	/*background: #fff url( ext/tree/center-bg.gif ) repeat-x top left;*/
+	font: 11px Arial, Helvetica, sans-serif;
+}
+
+#images .thumb{
+	background: #dddddd;
+	padding:3px;
+}
+#images .thumb img{
+	border:1px solid white;
+	height: 90px;
+	width: 120px;
+}
+#images .thumb-wrap{
+	float: left;
+	margin: 4px;
+	margin-right: 0;
+	padding: 5px;
+}
+#images .thumb-wrap span{
+	display: block;
+	overflow: hidden;
+	text-align: center;
+}
+#images .x-view-selected .thumb{
+	background:#8db2e3;
+}
+#images .loading-indicator {
+	font-size:8pt;
+	background-image:url(../../ext-3.2.0/resources/images/default/grid/loading.gif);
+	background-repeat: no-repeat;
+	background-position: left;
+	padding-left:20px;
+	margin:10px;
+}
+
+#winSelectFabric{
+	/*background: #fff url( ext/tree/center-bg.gif ) repeat-x top left;*/
+	font: 11px Arial, Helvetica, sans-serif;
+}
+
+
+#winSelectFabric .thumb{
+	background: #dddddd;
+	padding:3px;
+}
+#winSelectFabric .thumb img{
+	border:1px solid white;
+	height: 90px;
+	width: 120px;
+}
+#winSelectFabric .thumb-wrap{
+	float: left;
+	margin: 4px;
+	margin-right: 0;
+	padding: 5px;
+}
+#winSelectFabric .thumb-wrap span{
+	display: block;
+	overflow: hidden;
+	text-align: center;
+}
+#winSelectFabric .x-view-selected .thumb{
+	background:#8db2e3;
+}
+#winSelectFabric .loading-indicator {
+	font-size:8pt;
+	background-image:url(../../ext-3.2.0/resources/images/default/grid/loading.gif);
+	background-repeat: no-repeat;
+	background-position: left;
+	padding-left:20px;
+	margin:10px;
+}
+
+#panelLayoutTableDetail{
+	/*background: #fff url( ext/tree/center-bg.gif ) repeat-x top left;*/
+	font: 11px Arial, Helvetica, sans-serif;
+}
+
+
+#panelLayoutTableDetail .thumb{
+	background: #dddddd;
+	padding:3px;
+}
+#panelLayoutTableDetail .thumb-style{
+	border:1px solid white;
+	height: 120px;
+	width: 100px;
+}
+#panelLayoutTableDetail .thumb-fabric{
+	border:1px solid white;
+	height: 60px;
+	width: 100px;
+}
+#panelLayoutTableDetail .thumb-wrap{
+	float: left;
+	margin: 4px;
+	margin-right: 0;
+	padding: 5px;
+}
+#panelLayoutTableDetail .thumb-wrap span{
+	display: block;
+	overflow: hidden;
+	text-align: center;
+}
+#viewId .x-view-selected .thumb{
+	background:#8db2e3;
+}
+#panelLayoutTableDetail .loading-indicator {
+	font-size:8pt;
+	background-image:url(../../ext-3.2.0/resources/images/default/grid/loading.gif);
+	background-repeat: no-repeat;
+	background-position: left;
+	padding-left:20px;
+	margin:10px;
+}
+
+.x-dd-drag-proxy .multi-proxy .thumb-img{
+	height: 20px;
+	width: 30px;
+	margin:1px;
+}
+.x-dd-drag-proxy .thumb-img{
+	height: 60px;
+	width: 80px;
+}
+.image-node .x-tree-node-icon{
+    margin-bottom:1px;
+    height:15px;
+}
+.album-node .x-tree-node-icon, .album-btn{
+    background-image:url( images/album.gif ) !important;
+}
+#folders{
+	position:relative;
+}

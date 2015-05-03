@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"   
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<!--extends="myPackageIncludeInterceptor    json-default" -->
+	<package name="labintroductionManager-json" extends="json-default"
+		namespace="/labintroduction">
+		<action name="labintroductionAdd" class="LabIntroductionAction" method="create">
+			<result type="json">
+				<param name="noCache">true</param>
+				<param name="excludeNullProperties">true</param>
+				<param name="includeProperties">
+					success,
+					message					
+				</param>
+			</result>				
+		</action>
+		<action name="labintroductionDelete" class="LabIntroductionAction" method="delete">
+			<result type="json">
+				<param name="noCache">true</param>
+				<param name="excludeNullProperties">true</param>
+				<param name="includeProperties">
+					success,
+					message
+				</param>
+			</result>
+		</action>
+
+		<action name="labintroductionUpdate" class="LabIntroductionAction" method="update">
+			<result type="json">
+				<param name="noCache">true</param>
+				<param name="includeProperties">
+					success,
+					message
+				</param>
+			</result>
+		</action>
+		<action name="pagelabintroductionList" class="LabIntroductionAction" method="pagelabintroductionList">
+			<result type="json">
+				<param name="noCache">true</param>
+				<param name="excludeNullProperties">true</param>
+				<param name="includeProperties">
+					success,
+					message,
+					totalCount,
+					pagelabintroductionList\[\d+\]\.id,
+					pagelabintroductionList\[\d+\]\.introduction,
+					pagelabintroductionList\[\d+\]\.modifytime
+				</param>
+			</result>				
+		</action>
+		
+	</package>
+</struts>		        

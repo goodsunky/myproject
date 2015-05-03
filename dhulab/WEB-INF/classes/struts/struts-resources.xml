@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"   
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<!--extends="myPackageIncludeInterceptor    json-default" -->
+	<package name="resourcesManager-json" extends="json-default"
+		namespace="/resources">
+		<action name="resourcesAdd" class="ResourcesAction" method="create">
+			<result type="json">
+				<param name="noCache">true</param>
+				<param name="excludeNullProperties">true</param>
+				<param name="includeProperties">
+					success,
+					message					
+				</param>
+			</result>				
+		</action>
+		<action name="resourcesDelete" class="ResourcesAction" method="delete">
+			<result type="json">
+				<param name="noCache">true</param>
+				<param name="excludeNullProperties">true</param>
+				<param name="includeProperties">
+					success,
+					message
+				</param>
+			</result>
+		</action>
+		
+		<action name="resourcesDownload" class="ResourcesAction" method="download">
+			<result type="json">
+				<param name="noCache">true</param>
+				<param name="excludeNullProperties">true</param>
+				<param name="includeProperties">
+					success,
+					message
+				</param>
+			</result>
+		</action>
+		
+		<action name="resourcesUpdate" class="ResourcesAction" method="update">
+			<result type="json">
+				<param name="noCache">true</param>
+				<param name="includeProperties">
+					success,
+					message
+				</param>
+			</result>
+		</action>
+		<action name="pageresourcesList" class="ResourcesAction" method="pageresourcesList">
+			<result type="json">
+				<param name="noCache">true</param>
+				<param name="excludeNullProperties">true</param>
+				<param name="includeProperties">
+					success,
+					message,
+					totalCount,
+					pageresourcesList\[\d+\]\.id,
+					pageresourcesList\[\d+\]\.extendname,
+					pageresourcesList\[\d+\]\.filename,
+					pageresourcesList\[\d+\]\.storefilename,
+					pageresourcesList\[\d+\]\.filesize,					
+					pageresourcesList\[\d+\]\.uploadtime,
+					pageresourcesList\[\d+\]\.userinfo\.name,
+					pageresourcesList\[\d+\]\.downloadcounts
+				</param>
+			</result>				
+		</action>
+		<action name="pageresourcesclassList" class="ResourcesAction" method="pageresourcesclassList">
+			<result type="json">
+				<param name="noCache">true</param>
+				<param name="excludeNullProperties">true</param>
+				<param name="includeProperties">
+					success,
+					message,
+					totalCount,
+					pageresourcesList\[\d+\]\.id,
+					pageresourcesList\[\d+\]\.extendname,
+					pageresourcesList\[\d+\]\.filename,
+					pageresourcesList\[\d+\]\.storefilename,
+					pageresourcesList\[\d+\]\.filesize,					
+					pageresourcesList\[\d+\]\.uploadtime,
+					pageresourcesList\[\d+\]\.userinfo\.name,
+					pageresourcesList\[\d+\]\.downloadcounts
+				</param>
+			</result>				
+		</action>
+	</package>
+</struts>		        

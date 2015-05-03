@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"   
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<!--extends="myPackageIncludeInterceptor    json-default" -->
+	<package name="labinstitutionManager-json" extends="json-default"
+		namespace="/labinstitution">
+		<action name="labinstitutionAdd" class="LabInstitutionAction" method="create">
+			<result type="json">
+				<param name="noCache">true</param>
+				<param name="excludeNullProperties">true</param>
+				<param name="includeProperties">
+					success,
+					message					
+				</param>
+			</result>				
+		</action>
+		<action name="labinstitutionDelete" class="LabInstitutionAction" method="delete">
+			<result type="json">
+				<param name="noCache">true</param>
+				<param name="excludeNullProperties">true</param>
+				<param name="includeProperties">
+					success,
+					message
+				</param>
+			</result>
+		</action>
+
+		<action name="labinstitutionUpdate" class="LabInstitutionAction" method="update">
+			<result type="json">
+				<param name="noCache">true</param>
+				<param name="includeProperties">
+					success,
+					message
+				</param>
+			</result>
+		</action>
+		<action name="pagelabinstitutionList" class="LabInstitutionAction" method="pagelabinstitutionList">
+			<result type="json">
+				<param name="noCache">true</param>
+				<param name="excludeNullProperties">true</param>
+				<param name="includeProperties">
+					success,
+					message,
+					totalCount,
+					pagelabinstitutionList\[\d+\]\.id,
+					pagelabinstitutionList\[\d+\]\.researchguid,
+					pagelabinstitutionList\[\d+\]\.researchmember,
+					pagelabinstitutionList\[\d+\]\.modifytime
+				</param>
+			</result>				
+		</action>
+		
+	</package>
+</struts>		        

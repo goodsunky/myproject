@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"   
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<!--extends="myPackageIncludeInterceptor    json-default" -->
+	<package name="majorManager-json" extends="json-default"
+		namespace="/major">
+		<action name="majorAdd" class="MajorAction" method="create">
+			<result type="json">
+				<param name="noCache">true</param>
+				<param name="excludeNullProperties">true</param>
+				<param name="includeProperties">
+					success,
+					message					
+				</param>
+			</result>				
+		</action>
+		<action name="majorDelete" class="MajorAction" method="delete">
+			<result type="json">
+				<param name="noCache">true</param>
+				<param name="excludeNullProperties">true</param>
+				<param name="includeProperties">
+					success,
+					message
+				</param>
+			</result>
+		</action>
+
+		<action name="majorUpdate" class="MajorAction" method="update">
+			<result type="json">
+				<param name="noCache">true</param>
+				<param name="includeProperties">
+					success,
+					message
+				</param>
+			</result>
+		</action>
+		<action name="pagemajorList" class="MajorAction" method="pagemajorList">
+			<result type="json">
+				<param name="noCache">true</param>
+				<param name="excludeNullProperties">true</param>
+				<param name="includeProperties">
+					success,
+					message,
+					totalCount,
+					pagemajorList\[\d+\]\.id,
+					pagemajorList\[\d+\]\.major,
+					pagemajorList\[\d+\]\.modifytime
+				</param>
+			</result>				
+		</action>
+		<action name="allmajorList" class="MajorAction" method="allmajorList">
+			<result type="json">
+				<param name="noCache">true</param>
+				<param name="excludeNullProperties">true</param>
+				<param name="includeProperties">
+					success,
+					message,
+					totalCount,
+					majorList\[\d+\]\.id,
+					majorList\[\d+\]\.major,
+					majorList\[\d+\]\.modifytime
+				</param>
+			</result>				
+		</action>
+	</package>
+</struts>		        

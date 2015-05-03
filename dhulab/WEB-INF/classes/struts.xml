@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.multipart.maxSize" value="204800000000000"/>
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	<include file="struts/struts-index.xml" />
+	<include file="struts/struts-system.xml" />
+	<include file="struts/struts-user.xml" />
+	<include file="struts/struts-noticeinfo.xml" />
+	<include file="struts/struts-researchproject.xml" />
+	<include file="struts/struts-academicfruit.xml" />
+	<include file="struts/struts-duty.xml" />
+	<include file="struts/struts-resources.xml" />
+	<include file="struts/struts-friendlylink.xml" />
+	<include file="struts/struts-labintroduction.xml" />
+	<include file="struts/struts-labpicture.xml" />
+	<include file="struts/struts-cooperatecompany.xml" />
+	<include file="struts/struts-labinstitution.xml" />
+	<include file="struts/struts-labmember.xml" />
+	<include file="struts/struts-major.xml" />
+	<include file="struts/struts-grade.xml" />
+	<include file="struts/struts-contactus.xml" />
+	<include file="struts/struts-researchtype.xml" />
+	<include file="struts/struts-resourcetype.xml" />
+	<include file="struts/struts-resourcesubtype.xml" />
+</struts> 

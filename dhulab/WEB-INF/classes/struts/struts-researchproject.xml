@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"   
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<!--extends="myPackageIncludeInterceptor    json-default" -->
+	<package name="researchprojectinfo-default" extends="struts-default" namespace="/">
+		<action name="researchprojectdetail" class="ResearchProjectAction" method="showresearchprojectdetail">
+			<result name="success">WEB-INF/front/showresearchprojectdetail.jsp</result>	
+		</action>
+	</package>
+	
+	<package name="researchprojectManager-json" extends="json-default"
+		namespace="/researchproject">
+		<action name="researchprojectAdd" class="ResearchProjectAction" method="create">
+			<result type="json">
+				<param name="noCache">true</param>
+				<param name="excludeNullProperties">true</param>
+				<param name="includeProperties">
+					success,
+					message					
+				</param>
+			</result>				
+		</action>
+		<action name="researchprojectDelete" class="ResearchProjectAction" method="delete">
+			<result type="json">
+				<param name="noCache">true</param>
+				<param name="excludeNullProperties">true</param>
+				<param name="includeProperties">
+					success,
+					message
+				</param>
+			</result>
+		</action>
+
+		<action name="researchprojectUpdate" class="ResearchProjectAction" method="update">
+			<result type="json">
+				<param name="noCache">true</param>
+				<param name="includeProperties">
+					success,
+					message
+				</param>
+			</result>
+		</action>
+		<action name="researchprojectattachmentDownload" class="ResearchProjectAction" method="download">
+			<result type="json">
+				<param name="noCache">true</param>
+				<param name="excludeNullProperties">true</param>
+				<param name="includeProperties">
+					success,
+					message					
+				</param>
+			</result>				
+		</action>
+		<action name="pageresearchprojectList" class="ResearchProjectAction" method="pageResearchProjectList">
+			<result type="json">
+				<param name="noCache">true</param>
+				<param name="excludeNullProperties">true</param>
+				<param name="includeProperties">
+					success,
+					message,
+					totalCount,
+					pageresearchprojectList\[\d+\]\.id,
+					pageresearchprojectList\[\d+\]\.name,
+					pageresearchprojectList\[\d+\]\.introduction,
+					pageresearchprojectList\[\d+\]\.resp,
+					pageresearchprojectList\[\d+\]\.member,
+					pageresearchprojectList\[\d+\]\.respcont,
+					pageresearchprojectList\[\d+\]\.sche,
+					pageresearchprojectList\[\d+\]\.starttime,
+					pageresearchprojectList\[\d+\]\.issuetime,
+					pageresearchprojectList\[\d+\]\.endtime,
+					pageresearchprojectList\[\d+\]\.researchType\.typename,
+					pageresearchprojectList\[\d+\]\.researchType\.id
+				</param>
+			</result>				
+		</action>
+		
+	</package>
+</struts>		        

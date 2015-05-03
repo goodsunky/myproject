@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"   
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<package name="system" extends="json-default" namespace="/">
+		<action name="quit" class="SystemAction" method="quit">
+			<result name="success">WEB-INF/admin/login.jsp
+			</result>
+		</action>
+		<action name="passwordalter" class="SystemAction" method="passwordAlter">
+			<result type="json">
+				<param name="noCache">true</param>
+ 				<param name="excludeNullProperties">true</param>
+ 				<param name="includeProperties">
+ 					success,
+ 					message
+ 				</param>
+			</result>	
+		</action>
+		<!-- 
+		<action name="getUserPassword" class="SystemAction" method="getUserInformation">
+			<result type="json">
+				<param name="noCache">true</param>
+				<param name="excludeNullProperties">true</param>
+				<param name="includeProperties">
+					success,
+					message,
+					oldpassword
+				</param>
+			</result>	
+		</action>
+		 -->
+	</package>
+
+</struts>

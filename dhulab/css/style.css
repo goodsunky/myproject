@@ -1,0 +1,307 @@
+/* CSS Document  color:#5c5b5b;*/
+
+body{
+ 	margin: 0 ;
+	padding: 0;
+	text-align: center;
+	font-size:12px;
+	color:#000000;
+}
+a
+{
+	font-size:12px;	
+	color:#000000;
+	text-decoration: none;	
+}
+a:hover
+{
+	font-size:12px;
+	color:#ff0000;
+	text-decoration: underline;	
+}
+
+*{
+	padding: 0;
+	margin: 0 ;
+}
+table,td,form{
+	font-size:12px;
+}
+.Manage_Num{
+	font-size:11px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:#b50e14;
+	font-weight:bold;
+}
+
+/*
+.TdLine {
+	background: url(images/line.gif) center right no-repeat;
+}
+.TdLine2{
+	background: url(images/bottomline.gif) 6px right no-repeat;
+}*/
+.NavMenu {
+	font-size:14px;
+	color:#fff;
+	text-decoration:none;
+}
+a.NavMenu:hover {
+	font-size:14px;
+	color: #FFFF00;
+	text-decoration:underline;
+}
+.NavLink1 {
+	font-size:12px;
+	color:#051e34;
+	text-decoration:none;
+}
+a.NavLink1:hover {
+	font-size:12px;
+	color: #fc6500;
+	text-decoration:underline;
+}
+
+.FlashPicborder {
+	border:#bed1dc 5px solid;
+}
+.Padding1 {
+	padding:8px;
+}
+/*
+.BgLine {
+	background:url(images/con_2_left_navbg.gif) left bottom  repeat-x;
+}
+*/
+
+.ConLink1 {
+	font-size:12px;
+	color:#6d6d6d;
+	text-decoration:none;
+}
+.ConLink1:hover {
+	font-size:12px;
+	color:#fc6500;
+	text-decoration:underline;
+}
+
+.Numstyle {
+	font-family:Arial,Verdana, Helvetica, sans-serif;
+	font-size:11px;
+	/*color:#05659d;*/
+}
+.Numstyle2 {
+	font-family:Arial,Verdana, Helvetica, sans-serif;
+	font-size:11px;
+	color:#3f4446;
+}
+
+.ScrollContent{
+	color:#7c7c7c;
+	font-size:12px;
+	line-height:170%;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:1em;
+	padding:8px 5px;
+}
+.BottomLink {
+	font-size:14px;
+	color:#787d81;
+	text-decoration:none;
+}
+.BottomLink:hover {
+	font-size:14px;
+	color:#fc6500;
+	text-decoration:underline;
+}
+/*
+.CopyBg {
+	background:#fff url(images/bottombg.gif) repeat-x left top;
+}*/
+
+.CopyColor1 {
+	font-size:12px;
+	color:#000000;
+}
+.CopyColor2 {
+	font-size:12px;
+	color:#016599;
+}
+
+
+
+
+
+.Leve2NavBlue {
+	font-size:12px;
+	color:#0448ba;
+}
+/*
+.Leve2BottomBg {
+	background:url(images/con_2_left_08.gif) no-repeat left bottom;
+}
+.Leve2NavBg {
+	background:url(images/con_2_left_08.gif) no-repeat left bottom;
+}
+
+.Leve2NavRgTop {
+	background:url(images/con_2_right_topbg.jpg) no-repeat left top;
+}
+
+.Leve2NavRgTop1 {
+	background:url(images/con_2_right_topbg.jpg) repeat-x ;
+}
+
+
+.Leve2Navline {
+	background:url(images/con_2_navline.gif) no-repeat right top;
+}*/
+
+
+.Leve2NavTitle {
+	font-size:12px;
+	font-weight:bold;
+	color:#04617a;
+}
+
+.Leve2ConLink2 {
+	font-size:14px;
+	color:#043282;
+	text-decoration:none;
+}
+.Leve2ConLink2:hover {
+	font-size:14px;
+	color:#fc610c;
+	text-decoration:underline;
+}
+.Leve2ConSelect {
+	font-size:14px;
+	font-weight:bold;
+	color:#fc610c;
+}
+
+.Leve2ConLink3 {
+	font-size:14px;
+	color:#6b6661;
+	text-decoration:none;
+	margin-left:22px;
+}
+.Leve2ConLink3:hover {
+	font-size:14px;
+	color:#fc610c;
+	text-decoration:underline;
+}
+/*
+.Leve2ConLink3Marginleft {
+
+	background:url(images/con_2_navarrow2.gif) no-repeat 10px center;
+}
+*/
+.Leve2Style1 {
+	border-bottom:#d5e3e3 1px solid;
+	background:#f4fcfc;
+}
+.Leve2Style2 {
+	border-bottom:#d5e3e3 1px solid;
+	background:#FFF;
+}
+.Leve2Style3 {
+	border-bottom:#d5e3e3 1px solid;
+}
+.Numstyle3 {
+	font-family:Arial,Verdana, Helvetica, sans-serif;
+	font-size:11px;
+	color:#05659d;
+}
+
+.Leve2ConLink4 {
+	font-family:Arial,Verdana, Helvetica, sans-serif;
+	font-size:11px;
+	color:#05659d;
+	text-decoration:none;
+	margin:0 3px;
+	
+}
+.Leve2ConLink4:hover {
+	font-family:Arial,Verdana, Helvetica, sans-serif;
+	font-size:11px;
+	color:#fc610c;
+	text-decoration:underline;
+}
+.Leve2ConLink5 {
+	font-family:Arial,Verdana, Helvetica, sans-serif;
+	font-size:12px;
+	color:#fc610c;
+	text-decoration:none;
+	font-weight:bold;
+	margin:0 3px;
+	
+}
+/*
+.Leve2BottomBg2{
+	background:#f4fcfc url(images/con_2_conbg.jpg) no-repeat right bottom;
+}
+*/
+
+.Leve2IntroCon {
+	font-size:14px;
+	color::#3a5555;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	line-height:180%;
+	padding:5px;
+	text-indent:1em;
+
+}
+.Leve2IntroTitle {
+	font-size:16px;
+	color:#0447b7;
+	font-weight:bold;
+}
+
+.Leve2IntroNum {
+	font-family:Arial,Verdana, Helvetica, sans-serif;
+	font-size:12px;
+	color:#0447b7;
+	
+}
+
+.Leve2BottomBg .BgLine 
+{
+	list-style:none;
+	line-height:30px;
+	text-align:left;
+	text-indent: 29px;
+	/*background-image: url(images/con_2_left_navbg.gif);*/
+	background-repeat: repeat-x;
+	background-position: left 29px;
+}
+.Leve2BottomBg .BgLine div
+{
+    /*background-image: url(images/con_2_navarrow.gif);*/
+	background-repeat: no-repeat;
+	background-position: 10px 12px;
+}
+.Leve2BottomBg .BgLine .Leve2ConSelect {
+	font-size:14px;
+	font-weight:bold;
+	color:#fc610c;
+	text-indent:25px;
+}
+.Leve2BottomBg .BgLine a
+{
+   text-indent:25px;
+}
+a.blueHead {
+	font-family: "����";
+	color: #FF6600;
+	font-size: 13px;
+	text-decoration: none;
+}
+a.blueHead:hover {
+	font-family: "����";
+	color: #333333;
+	font-size: 13px;
+	text-decoration: underline;
+}

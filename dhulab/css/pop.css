@@ -1,0 +1,40 @@
+body{background:#FFF;margin:0;padding:0;text-align:center;font-family:Arial;font-size:12px;}
+a
+{
+	font-size:12px;
+	text-decoration: none;	
+}
+a:hover
+{
+	font-size:12px;
+	text-decoration: underline;	
+}
+div.pop{width:800px;margin:0 auto;}
+div.pop div.t{background:url(../images/x_p_top.jpg) no-repeat;height:86px;}
+div.pop div.t div.title{padding:50px 0 0 225px;text-align:left;font:bold italic 22px/140% ºÚÌå;letter-spacing:5px;color:#AA8000}
+div.pop div.t div.titles{padding:50px 0 0 225px;text-align:left;font:bold italic 22px/140% ºÚÌå;letter-spacing:5px;color:#AA8000}
+
+div.pop div.b{background:url(../images/x_p_body.jpg) left top repeat-y;}
+div.pop div.bb{background:url(../images/x_p_bodyleft.jpg) left top no-repeat;padding:10px 0 0 65px;}
+div.pop div.f{background:url(../images/x_p_foot.jpg) no-repeat;height:39px;}
+
+div.article{border:1px solid #CCCCCC;background:#F8FAFC;width:670px;padding:8px;}
+div.article div.atitle{color:#01479A;font:bold 14px/150% "";letter-spacing:1px;}
+div.article div.ainfo{border-top:1px dashed #000000 ;font:12px/150% "";color:#01479A;text-align:right;}
+div.article div.acontent{text-align:left;border-bottom:1px dashed #000;min-height:400px;}
+div.attachment{text-align:left;border-bottom:1px dashed #000;}
+[xmlns] div.article div.acontent{height:auto;}
+
+div.button{padding-top:10px;text-align:center;}
+input.button{
+	font-size: 12px;
+	text-decoration: none;
+	letter-spacing: 2px;
+	background-image: url(../images/button.gif);
+	height: 18px;
+	border: 1px solid #D18C0C;
+	background-repeat: repeat-x;
+	font-family: "ËÎÌå",sans-serif;
+	color: #333333;
+	margin-top:2px;
+}

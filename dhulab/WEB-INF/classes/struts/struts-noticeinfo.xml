@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"   
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<!--extends="myPackageIncludeInterceptor    json-default" -->
+	<package name="noticeinfo-default" extends="struts-default" namespace="/">
+		<action name="noticedetail" class="NoticeInfoAction" method="shownoticedetail">
+			<result name="success">WEB-INF/front/shownoticedetail.jsp</result>	
+		</action>
+	</package>
+	
+	<package name="noticeinfoManager-json" extends="json-default"
+		namespace="/noticeinfo">
+		<action name="noticeinfoAdd" class="NoticeInfoAction" method="create">
+			<result type="json">
+				<param name="noCache">true</param>
+				<param name="excludeNullProperties">true</param>
+				<param name="includeProperties">
+					success,
+					message					
+				</param>
+			</result>				
+		</action>
+		<action name="noticeinfoDelete" class="NoticeInfoAction" method="delete">
+			<result type="json">
+				<param name="noCache">true</param>
+				<param name="excludeNullProperties">true</param>
+				<param name="includeProperties">
+					success,
+					message
+				</param>
+			</result>
+		</action>
+
+		<action name="noticeinfoUpdate" class="NoticeInfoAction" method="update">
+			<result type="json">
+				<param name="noCache">true</param>
+				<param name="includeProperties">
+					success,
+					message
+				</param>
+			</result>
+		</action>
+		<action name="noticeattachmentDownload" class="NoticeInfoAction" method="download">
+			<result type="json">
+				<param name="noCache">true</param>
+				<param name="excludeNullProperties">true</param>
+				<param name="includeProperties">
+					success,
+					message					
+				</param>
+			</result>				
+		</action>
+		
+		<action name="pageNoticeInfoList" class="NoticeInfoAction" method="pageNoticeInfoList">
+			<result type="json">
+				<param name="noCache">true</param>
+				<param name="excludeNullProperties">true</param>
+				<param name="includeProperties">
+					success,
+					message,
+					totalCount,
+					pageNoticeInfoList\[\d+\]\.id,
+					pageNoticeInfoList\[\d+\]\.title,
+					pageNoticeInfoList\[\d+\]\.content,
+					pageNoticeInfoList\[\d+\]\.readcount,
+					pageNoticeInfoList\[\d+\]\.type,
+					pageNoticeInfoList\[\d+\]\.time
+				</param>
+			</result>				
+		</action>
+		
+	</package>
+</struts>		        

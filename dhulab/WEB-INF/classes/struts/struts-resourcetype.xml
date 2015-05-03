@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"   
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<!--extends="myPackageIncludeInterceptor    json-default" -->
+	<package name="resourcetypeManager-json" extends="json-default"
+		namespace="/resourcetype">
+		<action name="resourcetypeAdd" class="ResourceTypeAction" method="create">
+			<result type="json">
+				<param name="noCache">true</param>
+				<param name="excludeNullProperties">true</param>
+				<param name="includeProperties">
+					success,
+					message					
+				</param>
+			</result>				
+		</action>
+		<action name="resourcetypeDelete" class="ResourceTypeAction" method="delete">
+			<result type="json">
+				<param name="noCache">true</param>
+				<param name="excludeNullProperties">true</param>
+				<param name="includeProperties">
+					success,
+					message
+				</param>
+			</result>
+		</action>
+
+		<action name="resourcetypeUpdate" class="ResourceTypeAction" method="update">
+			<result type="json">
+				<param name="noCache">true</param>
+				<param name="includeProperties">
+					success,
+					message
+				</param>
+			</result>
+		</action>
+		<action name="pageresourcetypeList" class="ResourceTypeAction" method="pageresourcetypeList">
+			<result type="json">
+				<param name="noCache">true</param>
+				<param name="excludeNullProperties">true</param>
+				<param name="includeProperties">
+					success,
+					message,
+					totalCount,
+					pageresourcetypeList\[\d+\]\.id,
+					pageresourcetypeList\[\d+\]\.type,
+					pageresourcetypeList\[\d+\]\.modifytime
+				</param>
+			</result>				
+		</action>
+		<action name="allresourcetypeList" class="ResourceTypeAction" method="allresourcetypeList">
+			<result type="json">
+				<param name="noCache">true</param>
+				<param name="excludeNullProperties">true</param>
+				<param name="includeProperties">
+					success,
+					message,
+					totalCount,
+					resourcetypeList\[\d+\]\.id,
+					resourcetypeList\[\d+\]\.type,
+					resourcetypeList\[\d+\]\.modifytime
+				</param>
+			</result>				
+		</action>
+		<action name="resourcetypeTreeList" class="ResourceTypeAction" method="resourcetypeTreeList">
+			<result type="json">
+				<param name="noCache">true</param>
+ 				<param name="excludeNullProperties">true</param>
+ 				<param name="includeProperties">
+ 				</param>
+			</result>
+		</action>
+	</package>
+</struts>		        
